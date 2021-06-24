@@ -3,15 +3,47 @@
   <title>Weekday Calculator</title>
 </head>
 <body>
-  <h1>Weekday Calculator</h1>
+  <div class="container">
+    <h1 class="jumbotron">Weekday Calculator</h1>
+        
+    <h3>
+        Determine Day of the Week.
+    </h3>
+    <form action="weekDay">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="weekday">Day</label>
+          <input type="integer" class="form-control" id="weekday" name="weekday">
+        </div>
+     
+        <div class="form-group col-md-4">
+          <label for="month">Month</label>
+          <select class="form-control" id="month">
+            <option value="Select">Select Month</option>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
+        </div>
       
-  <h3>
-      Determine Day of the Week.
-  </h3>
-  <form action="weekDay">
-    <label for="weekday">Date:</label>
-    <input type="date" id="weekday" name="weekday">
-    <input type="submit">
-  </form>
+        <div class="form-group col-md-4">
+          <label for="month">Year</label>
+          <input type="integer" class="form-control" id="year" name="year">
+        </div>
+      </div>
+        <input type="submit" class="btn btn-primary">
+    </form>
+
+    
+  </div>
 </body>
 </html>
