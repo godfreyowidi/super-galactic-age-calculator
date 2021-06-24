@@ -1,25 +1,11 @@
-export function leapYear(year) {
-  parseInt(year);
-  if (year % 4 === 0) {
-    return true;
-  }
-};
-
-export function yearCodeGenerator(year) {
-  let yy = parseInt(year.slice(year.length - 2));
-  let yearCode = (Math.floor(yy / 4) + yy) % 7;
-  return yearCode;
+//Date Object
+export default function Date(month, year, day) {
+  this.month = month;
+  this.year = year;
+  this.day = day;
 }
 
-export function monthCodeLeapYear(month, year) {
-  let monthCode;
-  if (leapYear(year) && month === "January") {
-    return monthCode = 5;
-  } else if (leapYear(year) && month === "February") {
-    return monthCode = 1;
-  }
-}
-
+//Objects
 const monthCodeObj = {
   January: 6,
   February: 2,
@@ -35,17 +21,6 @@ const monthCodeObj = {
   December: 4
 }
 
-export function monthCodeGenerator(month) {
-  let monthCode = monthCodeObj[month];
-  return monthCode;
-}
-
-export function tabulate(monthCode, yearCode, date) {
-  parseInt(date);
-  let day = (monthCode + date + yearCode) % 7;
-  return day;
-}
-
 const dayCodeObj = {
   1: 'Monday',
   2: 'Tuesday',
@@ -56,7 +31,43 @@ const dayCodeObj = {
   7: 'Sunday'
 }
 
-export function dayCodeConverter(dayCode) {
+//Month Code Functions
+export function monthCodeGenerator(month, year) {
+  let monthCode; 
+  if (!leapYear(year)) {
+    return monthCode = monthCodeObj[month];
+  } else if (leapYear(year)) {
+    return monthCode = monthCodeLeapYear(month, year);
+  }
+}
+
+// leap Year Functions
+export function leapYear(year) {
+  parseInt(year);
+  if (year % 4 === 0) {
+    return true;
+  }
+}
+
+export function monthCodeLeapYear(month, year) {
+  let monthCode;
+  if (leapYear(year) && month === "January") {
+    return monthCode = 5;
+  } else if (leapYear(year) && month === "February") {
+    return monthCode = 1;
+  }
+}
+
+//Year Code Functions
+export function yearCodeGenerator(year) {
+  let yy = parseInt(year.slice(year.length - 2));
+  let yearCode = (Math.floor(yy / 4) + yy) % 7;
+  return yearCode;
+}
+
+//Day of the week calculator
+export function tabulate(date, monthCode, yearCode) {
+  let dayCode = (date + monthCode + yearCode) % 7;
   dayCode.toString();
   let day = dayCodeObj[dayCode];
   return day;

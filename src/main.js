@@ -2,20 +2,39 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import './date.js';
+
+import { 
+  monthCodeGenerator, 
+  yearCodeGenerator,
+  tabulate
+} from './date.js';
+
+/*
+alternate way!
+// dateStuff can be changed
+import * as date from './date.js';
+
+dateStuff.monthCodeGenerator()
+dateStuff.yearCodeGenerator()
+*/
 
 $(document).ready(function() { 
-  $('#date').submit(function(event){
+  $('#weekDay').submit(function(event) {
 
     event.preventDefault();
-    const inputtedMonth = $("#month-input").val();
-    const inputtedYear = $("#year-input").val();
-    const inputtedDate = $("date-input").val();
+    let inputtedDay = parseInt($("#day").val());
+    let inputtedMonth = $("#month").val();
+    let inputtedYear = $("#year").val();
 
-    let date = new Date(inputtedMonth, inputtedYear, inputtedDate);
-    let Month = monthCodeGenerator(inputtedMonth);
-    let Year = yearCodeGenerator(inputtedYear);
-    let dayOfTheWeek = date.tabulate();
-    $("#dayOfTheWeek").append()
+    //inputtedDay = $("#day").val('');
+    //inputtedMonth = $("#month").val('');
+    //inputtedYear = $("#year").val('');
+
+    let month = monthCodeGenerator(inputtedMonth, inputtedYear);
+    let year = yearCodeGenerator(inputtedYear);
+
+    let dayOfTheWeek = tabulate(inputtedDay, month, year);
+    $("#dayOfTheWeek").empty();
+    $("#dayOfTheWeek").append(`<p>${dayOfTheWeek}</p>`);
   });
 });
