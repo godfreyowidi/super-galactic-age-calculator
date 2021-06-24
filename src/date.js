@@ -19,6 +19,40 @@ export function monthCodeLeapYear(month, year) {
   }
 }
 
+const monthCodeObj = {
+  January: 6,
+  February: 2,
+  March: 2,
+  April: 5,
+  May: 0,
+  June: 3,
+  July: 5,
+  August: 1,
+  September: 4,
+  October: 6,
+  November: 2,
+  December: 4
+}
+
+export function monthCodeGenerator(month) {
+  let monthCode = monthCodeObj[month];
+  return monthCode;
+}
+
+
+
+
+// const monthCodeArray = [6, 2, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4]
+
+
+// export function monthCodeGenerator(month) {
+//   let monthCode;
+//   if (month === January)
+//   return monthCode = 6;
+// } else if (month === February) {
+//   return monthCode = 2;
+// }
+
 // 2. Code for every year
 //   1. Take last 2 digits of any year
 //   2. Divide by 4 and ignore the remainder
