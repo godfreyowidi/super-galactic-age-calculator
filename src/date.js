@@ -39,6 +39,11 @@ export function monthCodeGenerator(month) {
   return monthCode;
 }
 
+export function tabulate(monthCode, yearCode, date) {
+  let day = (monthCode + date + yearCode) % 7;
+  return day;
+}
+// Month Code (get from monthCodeObj) + Day (get from user Input) + Year Code (We have to calculate) = Answer / 7 remainder is day of week
 
 
 
