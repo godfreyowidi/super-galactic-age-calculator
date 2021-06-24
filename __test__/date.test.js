@@ -3,6 +3,7 @@ import { yearCodeGenerator } from './../src/date.js';
 import { monthCodeLeapYear } from './../src/date.js';
 import { monthCodeGenerator } from './../src/date.js';
 import { tabulate } from './../src/date.js';
+import { dayCodeConverter } from './../src/date.js';
 
 describe('leapYear', () => {
   test('should test if user input for year is a leap year', () => {
@@ -31,6 +32,12 @@ describe('monthCodeGenerator', () => {
 describe('tabulate', () => {
   test('should test that function returns day code for January 21 2020', () => {
     expect(tabulate(5, 4, 21)).toEqual(2);
+  });
+})
+
+describe('dayCodeConverter', () => {
+  test('should test that function returns a day when dayCode is inputted', () => {
+    expect(dayCodeConverter(1)).toEqual('Monday');
   });
 })
 

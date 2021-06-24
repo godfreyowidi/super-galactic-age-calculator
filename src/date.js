@@ -1,4 +1,5 @@
 export function leapYear(year) {
+  parseInt(year);
   if (year % 4 === 0) {
     return true;
   }
@@ -40,9 +41,27 @@ export function monthCodeGenerator(month) {
 }
 
 export function tabulate(monthCode, yearCode, date) {
+  parseInt(date);
   let day = (monthCode + date + yearCode) % 7;
   return day;
 }
+
+const dayCodeObj = {
+  1: 'Monday',
+  2: 'Tuesday',
+  3: 'Wednesday',
+  4: 'Thursday',
+  5: 'Friday',
+  6: 'Saturday',
+  7: 'Sunday'
+}
+
+export function dayCodeConverter(dayCode) {
+  dayCode.toString();
+  let day = dayCodeObj[dayCode];
+  return day;
+}
+
 // Month Code (get from monthCodeObj) + Day (get from user Input) + Year Code (We have to calculate) = Answer / 7 remainder is day of week
 
 
