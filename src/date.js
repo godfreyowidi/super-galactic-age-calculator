@@ -1,19 +1,22 @@
-export function leapYear(yy) {
-  if (yy%4 == 0) {
+export function leapYear(year) {
+  if (year % 4 === 0) {
     return true;
   }
 };
 
-
 export function yearCodeGenerator(year) {
   let yy = parseInt(year.slice(year.length - 2));
   let yearCode = (Math.floor(yy / 4) + yy) % 7;
-  
-
-  // if (leapYear(year) && month === January) {
-  //   yy = 
-  // }
   return yearCode;
+}
+
+export function monthCodeLeapYear(month, year) {
+  let monthCode;
+  if (leapYear(year) && month === "January") {
+    return monthCode = 5;
+  } else if (leapYear(year) && month === "February") {
+    return monthCode = 1;
+  }
 }
 
 // 2. Code for every year

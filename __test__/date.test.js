@@ -1,5 +1,6 @@
 import { leapYear } from './../src/date.js';
 import { yearCodeGenerator } from './../src/date.js';
+import { monthCodeLeapYear } from './../src/date.js';
 
 describe('leapYear', () => {
   test('should test if user input for year is a leap year', () => {
@@ -10,5 +11,11 @@ describe('leapYear', () => {
 describe('yearCodeGenerator', () => {
   test('should test that function returns year code', () => {
     expect(yearCodeGenerator('2061')).toEqual(6);
+  });
+})
+
+describe('monthCodeLeapYear', () => {
+  test('should test that function returns 5 and 1 for January and Feburary respectively', () => {
+    expect(monthCodeLeapYear('February', 2020)).toEqual(1);
   });
 })
