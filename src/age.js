@@ -23,3 +23,8 @@ export function marsAge(number) {
   let age = ((number) / (ages.mars));
   return ("You are " + age + " mars years old")
 }
+
+export function jupiterAge(number) {
+  let age = ((number) / (ages.jupiter));
+  return ("You are " + age + " jupiter years old")
+}

@@ -1,6 +1,7 @@
 import { mercuryAge } from './../src/age.js';
 import { venusAge } from './../src/age.js';
 import { marsAge } from './../src/age.js';
+import { jupiterAge } from './../src/age.js';
 
 describe('mercuryAge', () => {
   test('should test function that converts user inputted age to mercury age', () => {
@@ -18,5 +19,11 @@ describe('venusAge', () => {
 describe('marsAge', () => {
   test('should test function that converts user inputted age to marsAge age', () => {
     expect(marsAge(10)).toEqual("You are 5.555555555555555 mars years old");
+  });
+})
+
+describe('jupiterAge', () => {
+  test('should test function that converts user inputted age to jupiterAge age', () => {
+    expect(jupiterAge(10)).toEqual("You are 0.8431703204047218 jupiter years old");
   });
 })
