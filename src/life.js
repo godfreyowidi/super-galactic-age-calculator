@@ -4,7 +4,8 @@ export default function life(age, sex) {
 }
 
 export function lifeExpectancyBasedOnAge(age) {
-    return (age / 2);
+    let ageNum = age / 2;
+    return ageNum;
 }
 
 export function lifeExpectancyBasedOnSex(sex) {
@@ -16,4 +17,9 @@ export function lifeExpectancyBasedOnSex(sex) {
   } else {
     return "No Pun Intended!"
   }
+}
+
+export function tabulate(ageNum, estimate) {
+  let lifeExpectancy = ageNum + estimate;
+  return lifeExpectancy;
 }
