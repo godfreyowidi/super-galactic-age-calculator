@@ -1,8 +1,7 @@
-# _Weekday Calculator_
+# _Galactic Age and Life Expectancy Calculator_
 
-#### _Web application to give you the day of the week for any date inputted_
+#### _Web application that converts solar age to galactic age and also output life expectancy_
 
-#### By _**Shoshana Newman**_
 #### By _**Godfrey Owidi**_
 
 
@@ -21,7 +20,7 @@
 
 ## Description
 
-_This browser application takes user inputs and caluclates day of the week using an known algorithim_
+_This application takes age from the user and converts it to galactic age by multiply that input with a formula depending on the planet. The user also get to see their life expectancy depending on their age and sex_
 
 ## Setup/Installation Requirements
 
