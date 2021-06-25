@@ -1,0 +1,11 @@
+body {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: bolder;
+  background-image: linear-gradient(to bottom, rgb(188, 200, 214), rgb(55, 136, 184), rgb(45, 136, 136), rgb(0, 81, 255));
+}
+.card {
+  display: none; 
+}
+#dayOfTheWeek {
+  margin: 5%;
+}

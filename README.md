@@ -1,55 +1,69 @@
-User Input
-January 21, 2020 => Save to date oject
+# _Weekday Calculator_
+
+#### _Web application to give you the day of the week for any date inputted_
+
+#### By _**Shoshana Newman**_
+#### By _**Godfrey Owidi**_
 
 
-const date = new Date(yearCode, month, dayCode)
-save the initial user input in date object : Date{2020, January, 21}
-Then we will manipulate the data ---> meaning we will take the Year and use the formuala to calculate the Year Code and update the object with the Year code, and same thing for the Month code
-upated object Date(4, 05, 21)
+## Technologies Used
 
-1. take the input, let dayCode = ('#input').val()
-2. const dateObject = new Date(dayCode, monthCode, yearCode)
-3. conditionals to check for leap year 
-if {
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _JavaScript_
+* _jQuery_
+* _Git and Github_
+* _Webpack_
+* _eslint_
+* _babbel_
+* _Jest_
 
-}
-return leapyear 
-3. let dayOftheWeek = monthCode + dayCode + YearCode (We have to calculate)
+## Description
 
+_This browser application takes user inputs and caluclates day of the week using an known algorithim_
+
+## Setup/Installation Requirements
+
+* _Navigate to: [Weekday Calculator](https://shonewman.github.io/weekday-calculator/index.html "Weekday Calculator")_
+* _To clone and run this application you will need to have [Git](https://git-scm.com/"Git" "Git") installed on your system_
+* _Then clone this repository [Repository](https://github.com/ShoNewman/weekday-calculator.git "Repository") to your computer using the following commands in your terminal:_
+- Clone repository to your computer:
+  - $ git clone https://github.com/ShoNewman/weekday-calculator.git
+- Install all dependencies in packages.json
+  - $ npm install
+- Open live development server
+  - $ npm run start
+
+## Known Bugs
+
+* _Entries above 31 are beyond the scope of this application_
+* _Does not account for negative numbers inputted_
+* _Does not account for special characters inputted_
+* _Does not restrict year structure convention_
+
+## License
+
+_Copyright 2021 Shoshana Newman_
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+## Contact Information
+
+_Shoshana Newman [sho.newman@gmail.com](mailto:sho.newman@gmail.com)_
+_Godfrey Owidi [godfreyowiidi@gmail.com](mailto:godfreyowiidi@gmail.com)_
+
+---------------------------------------------------------------------------
 
 Business Logic
 let monthCode; Get user input than translate that to our Code based on the monthCodeObj 
 let dayCode = ('#input').val()
 let yearCode = Get from formula based on user input
-
-
-Note: Number for day of the week
-
-   const dayCodeObj = {
-    mon: 1,
-    tues: 2
-  }
-function Date(month, day, year) {
-  this.month = month;
-  this.day = day;
-  this.year = year;
-}
-
-const date = new Date(2021, 23, 6);
-
-```
-Date.prototype.enterDay = function(num1) {
-  return this.day; 
-}
-```
-
-Date.prototype.enterMonth = function(month) {
-  return this.month = monthCodeObj(month)
-}
-
-Date.prototype.enterYear = function(num3) {
-  
-}
  
 1. Number for every month
   If else statement for Leap Year with this condition
@@ -72,8 +86,6 @@ Date.prototype.enterYear = function(num3) {
     December: 4
   }
 
-
-
 2. Code for every year
   1. Take last 2 digits of any year
   2. Divide by 4 and ignore the remainder
@@ -88,9 +100,7 @@ Date.prototype.enterYear = function(num3) {
 
 3. Month Code (get from monthCodeObj) + Day (get from user Input) + Year Code (We have to calculate) = Answer / 7 remainder is day of week
 
-monthCode + 
-
-
+Test Dates:
 January 21 2020
 1. Month Code: 5 Leap year
 2. Year Code: 4
@@ -111,13 +121,3 @@ June 23, 2021
   5. 26 /  7 = 3 remainder is 5 
 3. 3 + 23 + 5 = 31 / 7 = 4 remainder is 3 = Wednesday
 
-function Date(month, day, year) {
-  this.month = month;
-  this.day = day;
-  this.year = year;
-}
-
-const d = new Date(2018, 11, 24);
-
-
--------------------------------
