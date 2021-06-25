@@ -9,7 +9,6 @@ describe('mercuryAge', () => {
   });
 })
 
-
 describe('venusAge', () => {
   test('should test function that converts user inputted age to venusAge age', () => {
     expect(venusAge(10)).toEqual("You are 16.129032258064516 venus years old");

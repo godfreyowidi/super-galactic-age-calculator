@@ -1,4 +1,8 @@
 export default function life(age, sex) {
-  this.age = 0;
+  this.age = age;
   this.sex = sex;
+}
+
+export function lifeExpectancyBasedOnAge(age) {
+    return (age / 2);
 }
