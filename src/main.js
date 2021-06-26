@@ -23,6 +23,8 @@ $(document).ready(function() {
     let inputtedAge = $("").val();
     let inputtedSex = $("").val();
 
+    let age = 
+
     $("#lifeExpectancy").empty();
     $("#lifeExpectancy").append(`<h5>${lifeExpectancy}</h5`);
   });
