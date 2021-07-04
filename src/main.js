@@ -26,6 +26,7 @@ $(document).ready(function() {
 
     let age = new Age(inputtedAge);
     let sex = lifeExpectancyBasedOnSex(inputtedSex);
+    let lifeExpectancy = age.tabulate(sex, age)
     let mercury = age.mercuryAge();
 
     $("#lifeExpectancy").empty();
