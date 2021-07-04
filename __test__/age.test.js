@@ -33,8 +33,10 @@ describe('jupiterAge', () => {
 })
 
 describe('lifeExpect', () => {
-  test('should test function that return age subtracted from base 80', () => {
+  test('should test life expectancy by multiplying base age with absolute weight', () => {
     const life_expectancy = new Age(50);
-    expect(life_expectancy.lifeExpect(50)).toEqual(30);
+    expect(life_expectancy.lifeExpect(50)).toEqual(90);
   });
 })
+
+
