@@ -20,3 +20,10 @@ describe('marsAge', () => {
     expect(mars_age.marsAge(10)).toEqual("You are 6 mars years old");
   });
 })
+
+describe('jupiterAge', () => {
+  test('should test function that converts user inputted age to jupiterAge age', () => {
+    const jupiter_age = new Age(10);
+    expect(jupiter_age.jupiterAge(10)).toEqual("You are 1 jupiter years old");
+  });
+})

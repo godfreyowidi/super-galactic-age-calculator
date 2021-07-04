@@ -8,7 +8,6 @@ export default class Age {
     return ("You are " + age + " mercury years old")
   }
 
-
   venusAge(number) {
     let age = Math.round((number) / (0.62));
     return ("You are " + age + " venus years old")
@@ -17,6 +16,10 @@ export default class Age {
   marsAge(number) {
     let age = Math.round((number) / (1.8));
     return ("You are " + age + " mars years old")
+  }
+
+  jupiterAge(number) {
+    
   }
   
 }
