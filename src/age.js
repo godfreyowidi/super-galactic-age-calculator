@@ -10,7 +10,8 @@ export default class Age {
 
 
   venusAge(number) {
-  
+    let age = Math.round((number) / (0.62));
+    return ("You are " + age + " venus years old")
   }
   
 }
