@@ -25,6 +25,7 @@ export default class Age {
   }
 
   lifeExpect(number) {
-    
+    let expect1 = 80 - number;
+    return expect1;
   }
 }
