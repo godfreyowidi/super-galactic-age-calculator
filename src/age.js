@@ -25,8 +25,6 @@ export default class Age {
   }
 
   lifeExpect(number) {
-    const range = (min, max) => Array.from({ length: max - min + 1 }, (_, i) => min + i);
-    return range(0, 5);
+    
   }
-  
 }
