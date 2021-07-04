@@ -4,6 +4,7 @@ export default class Age {
   }
 
   mercuryAge(number) {
-    
+    let age = Math.round((number) / (0.24));
+    return ("You are " + age + " mercury years old")
   }
 }
