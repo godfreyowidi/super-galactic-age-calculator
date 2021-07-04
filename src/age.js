@@ -19,7 +19,8 @@ export default class Age {
   }
 
   jupiterAge(number) {
-    
+    let age = Math.round((number) / (11.86));
+    return ("You are " + age + " jupiter years old")
   }
   
 }
