@@ -13,5 +13,10 @@ export default class Age {
     let age = Math.round((number) / (0.62));
     return ("You are " + age + " venus years old")
   }
+
+  marsAge(number) {
+    let age = Math.round((number) / (1.8));
+    return ("You are " + age + " mars years old")
+  }
   
 }
