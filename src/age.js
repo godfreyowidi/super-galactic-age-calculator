@@ -25,7 +25,9 @@ export default class Age {
   }
 
   lifeExpect(number) {
-  
+    let base = 80 - number;
+    let weight = Math.round(3.3 - Math.abs((number-20)/800));
+    return base * weight;
   }
     
 }
