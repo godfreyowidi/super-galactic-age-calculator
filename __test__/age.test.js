@@ -37,6 +37,10 @@ describe('lifeExpect', () => {
     const life_expectancy = new Age(50);
     expect(life_expectancy.lifeExpect(50)).toEqual(90);
   });
+  test('should return years beyond life expectancy', () => {
+    const life_expectancy = new Age(90);
+    expect(life_expectancy.lifeExpect(90)).toEqual(10);
+  });
 })
 
 
