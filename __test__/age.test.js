@@ -1,4 +1,8 @@
 import Age, { mercuryAge } from './../src/age.js';
+import  { venusAge } from './../src/age.js';
+import  { marsAge } from './../src/age.js';
+import  { jupiterAge } from './../src/age.js';
+import  { lifeExpect} from './../src/age.js';
 
 describe('mercuryAge', () => {
   test('should test function that converts user inputted age to mercury age', () => {
@@ -25,5 +29,12 @@ describe('jupiterAge', () => {
   test('should test function that converts user inputted age to jupiterAge age', () => {
     const jupiter_age = new Age(10);
     expect(jupiter_age.jupiterAge(10)).toEqual("You are 1 jupiter years old");
+  });
+})
+
+describe('lifeExpect', () => {
+  test('should test function that return an array of age group', () => {
+    const life_expectancy = new Age(5);
+    expect(life_expectancy.lifeExpect(5)).toEqual([0, 1, 2, 3, 4]);
   });
 })

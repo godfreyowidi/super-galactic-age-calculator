@@ -1,6 +1,7 @@
 export default class Age {
-  constructor(age) {
+  constructor(age, lifeExpectancy) {
     this.age = age;
+    this.lifeExpectancy = 50;
   }
 
   mercuryAge(number) {
@@ -21,6 +22,11 @@ export default class Age {
   jupiterAge(number) {
     let age = Math.round((number) / (11.86));
     return ("You are " + age + " jupiter years old")
+  }
+
+  lifeExpect(number) {
+    const range = (min, max) => Array.from({ length: max - min + 1 }, (_, i) => min + i);
+    return range(0, 5);
   }
   
 }
