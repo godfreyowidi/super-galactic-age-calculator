@@ -9,9 +9,9 @@ describe('galacticAge', () => {
 */
 
 import Age, { mercuryAge } from './../src/age.js';
-import { venusAge } from './../src/age.js';
-import { marsAge } from './../src/age.js';
-import { jupiterAge } from './../src/age.js';
+import Age, { venusAge } from './../src/age.js';
+import Age, { marsAge } from './../src/age.js';
+import Age, { jupiterAge } from './../src/age.js';
 
 describe('mercuryAge', () => {
   test('should test function that converts user inputted age to mercury age', () => {
