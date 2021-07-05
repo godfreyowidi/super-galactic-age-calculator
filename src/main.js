@@ -1,35 +1,45 @@
-// import $ from 'jquery';
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './styles.css';
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
+import Age from './age.js';
 
-// import { 
-//   mercuryAge, 
-//   venusAge,
-//   marsAge,
-//   jupiterAge
-// } from './age.js';
+$(document).ready(function() { 
+  $('#formFields').submit(function(event) {
+    event.preventDefault();
+    $("#age").val();
+    let input = parseInt($("#age").val());
+    let planet = $("#planet :selected").val();
 
-// import {
-//   lifeExpectancyBasedOnAge,
-//   lifeExpectancyBasedOnSex,
-//   tabulate
-// } from './life.js';
+    console.log("check the planet log", planet);
+    console.log("why is this so stubborn", input);
 
-// $(document).ready(function() { 
-//   $('#weekDay').submit(function(event) {
-
-//     event.preventDefault();
-//     let inputtedAge = $("#age").val();
-//     //let inputtedSex = $("input:radio[name=sex]:checked").val();
-//     let inputtedPlanet =$("#planet :selected").val();
-
-//     // let age = new Age(inputtedAge);
-//     // let sex = lifeExpectancyBasedOnSex(inputtedSex);
-//     // let lifeExpectancy = age.tabulate(sex, age)
-//     // let mercury = age.mercuryAge();
-
-//     $("#lifeExpectancy").empty();
-//     $("#lifeExpectancy").append(`<h5>${lifeExpectancy}</h5`);
-//   });
-// });
+    if (planet === "Mercury") {
+      let age = new Age(input);
+      let mercury = age.mercuryAge(input);
+      let life_expectancy = age.lifeExpect(input);
+      $("#mercury-age").text(mercury);
+      $("#life-expectancy").text("Oops! Your life expectancy: " + life_expectancy);
+    } else if (planet === "Venus") {
+      let age = new Age(input);
+      let venus = age.venusAge(input);
+      let life_expectancy = age.lifeExpect(input);
+      $("#venus-age").text(venus);
+      $("#life-expectancy").text("Oops! Your life expectancy: " + life_expectancy);
+    } else if (planet === "Mars") {
+      let age = new Age(input);
+      let mars = age.marsAge(input);
+      let life_expectancy = age.lifeExpect(input);
+      $("#mars-age").text(mars);
+      $("#life-expectancy").text("Oops! Your life expectancy: " + life_expectancy);
+    } else if (planet === "Jupiter") {
+      let age = new Age(input);
+      let jupiter = age.jupiterAge(input);
+      let life_expectancy = age.lifeExpect(input);
+      $("#jupiter-age").text(jupiter);
+      $("#life-expectancy").text("Oops! Your life expectancy: " + life_expectancy);
+    } else {
+      $("input").text(input);
+    }
+  });
+});

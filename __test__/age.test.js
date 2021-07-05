@@ -1,8 +1,4 @@
-import Age, { mercuryAge } from './../src/age.js';
-import  { venusAge } from './../src/age.js';
-import  { marsAge } from './../src/age.js';
-import  { jupiterAge } from './../src/age.js';
-import  { lifeExpect} from './../src/age.js';
+import Age from './../src/age.js';
 
 describe('mercuryAge', () => {
   test('should test function that converts user inputted age to mercury age', () => {
@@ -41,6 +37,6 @@ describe('lifeExpect', () => {
     const life_expectancy = new Age(90);
     expect(life_expectancy.lifeExpect(90)).toEqual(10);
   });
-})
+});
 
 
