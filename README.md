@@ -17,6 +17,7 @@
 * _eslint_
 * _babbel_
 * _Jest_
+* _Markdown_
 
 ## Description
 
