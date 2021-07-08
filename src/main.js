@@ -39,7 +39,7 @@ $(document).ready(function() {
       $("#jupiter-age").text(jupiter);
       $("#life-expectancy").text("Oops! Your life expectancy: " + life_expectancy);
     } else {
-      $("input").text(input);
+      $("#errorHandler").show();
     }
   });
 });

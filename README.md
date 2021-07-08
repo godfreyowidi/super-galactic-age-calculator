@@ -23,7 +23,8 @@
 * _This application takes age from the user and converts it to galactic age by multiply that input with a formula depending on the planet. The user also get to see their life expectancy depending on their age and weight_
 * _The project outline takes in 3 .js files and a .html file accompanied by TDD best practises. The main.js is the entry point while age.js file include the functionality accompanied by age.test.js which runs the tests_
 * _We have functions for each planets age and a subsequest test based on each outcome formula to calculate the age to that planet_
-* _we also have one more function in the age.test.js folder to calculate life expectancy using base age minus input age then multiplying by absolute weight determiner_
+* _We also have one more function in the age.js folder to calculate life expectancy using base age minus input age then multiplying by absolute weight determiner_
+* _With the function lifeExpect() we conduct two tests which test life expectancy by multiplying base age with absolute weight and another one which test return years beyond life expectancy_
 
 ## Setup/Installation Requirements
 
@@ -32,7 +33,7 @@
 * _Then clone this repository [Repository](https://github.com/godfreyowidi/super-galactic-age-calculator "Repository") to your computer using the following commands in your terminal:_
 - Clone repository to your computer:
   - $ git clone https://github.com/godfreyowidi/super-galactic-age-calculator
-- Install all dependencies in packages.json
+- Install all dependencies in packages.
   - $ npm install
 - Open live development server
   - $ npm run start
