@@ -36,6 +36,10 @@
   - $ git clone https://github.com/godfreyowidi/super-galactic-age-calculator
 - Install all dependencies in packages.
   - $ npm install
+- build/prep tasks for project
+  - $ npm run build
+- To specify test suite for the tests scripts
+  - $ npm run test
 - Open live development server
   - $ npm run start
 
